@@ -32,7 +32,7 @@ public class RoundRobinLab {
             Process currentProcess = readyQueue.remove(0);
             int executionTime = Math.min(timeQuantum, currentProcess.remainingTime);
             currentTime += executionTime;
-            currentProcess.remainingTime -= executionTime;
+            currentProcess.remainingTime -= executionTime; // Privde the reamiantime while trying to executed the times
 
             if (currentProcess.remainingTime > 0) {
                 readyQueue.add(currentProcess); // Add back to the end of the queue
